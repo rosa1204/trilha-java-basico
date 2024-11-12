@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ContaTerminal {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Declaração das variáveis
+        int numero;
+        String agencia;
+        String nomeCliente;
+        double saldo;
+
+        // Entrada de dados via terminal
+        System.out.println("Por favor, digite o número da Agência!");
+        numero = scanner.nextInt();
+
+        System.out.println("Por favor, digite o número da Agência!");
+        agencia = scanner.next();
+
+        System.out.println("Por favor, digite o seu nome!");
+        scanner.nextLine(); // Consumir a quebra de linha pendente
+        nomeCliente = scanner.nextLine();
+
+        System.out.println("Por favor, digite o seu saldo!");
+        saldo = scanner.nextDouble();
+
+        // Exibir a mensagem final
+        String mensagem = "Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " +
+                agencia + ", conta " + numero + " e seu saldo " + saldo + " já está disponível para saque.";
+
+        System.out.println(mensagem);
+
+        scanner.close();
+    }
+}
